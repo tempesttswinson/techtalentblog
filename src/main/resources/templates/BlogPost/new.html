@@ -12,29 +12,8 @@
 <body>
     <div class="container">
         <div class="row">
-            <h1>Welcome to Our site</h1>
-            <h3>Check out the blogs!</h3>
-
-            <div th:each="blog:${posts}">
-                <div class="col-sm">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title" th:text="${blog.title}"></h5>
-                            <p th:text="${blog.author}"></p>
-                            <p th:text="${blog.blogEntry}"></p>
-                        </div>
-                        <div class="card-footer"></div>
-                    </div>
-                    <!--  End of .card -->
-                </div>
-                <!-- End of .col-sm -->
-            </div>
-            <!-- End of posts loop -->
-        </div>
-
-        <div class="row">
             <p>Use the form below to submit a blog post:</p>
-            <form action="#" th:action="@{/}" th:object="${blogPost}" method="POST">
+            <form action="#" th:action="@{/blogposts}" th:object="${blogPost}" method="POST">
                 <label for="blogTitle">Title:</label>
                 <input type="text" name="blogTitle" th:field="*{title}">
 
