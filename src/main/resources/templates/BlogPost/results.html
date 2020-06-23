@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech Talent Blog</title>
 
-    <link rel="stylesheet" href="../../webjars/bootstrap/4.5.0/css/bootstrap.min.css">
+    <div th:replace="/fragments/styling :: head-style"></div>
 
 </head>
 
@@ -36,9 +36,7 @@
         </div>
     </div>
 
-    <script src="../../webjars/jquery/3.5.1/jquery.min.js"></script>
-    <script src="../../webjars/popper.js/2.0.2/popper.min.js"></script>
-    <script src="../../webjars/bootstrap4.5.0/js//bootstrap.min.js"></script>
+    <div th:replace="/fragments/styling :: body-links"></div>
 </body>
 
 </html>
