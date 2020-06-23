@@ -5,17 +5,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech Talent Blog</title>
+
+    <link rel="stylesheet" href="../../webjars/bootstrap/4.5.0/css/bootstrap.min.css">
+
 </head>
 
 <body>
-    <h3>Blog Post Form</h3>
-    <p>Thank you for your submission</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl">
+                <h3>Blog Post Form</h3>
+                <p>Thank you for your submission</p>
 
-    <h4>Blog Post</h4>
-    <p th:text="${title}"></p>
-    <p th:text="${author}"></p>
-    <p th:text="${blogEntry}"></p>
+                <h4>Blog Post</h4>
+                <p th:text="${title}"></p>
+                <p th:text="${author}"></p>
+                <p th:text="${blogEntry}"></p>
+            </div>
+        </div>
 
+        <div class="row">
+            <div class="col-md">
+                <a href="/">
+                    <button class="btn btn-primary">Return Home</button>
+                </a>
+                <a href="blogposts/new">
+                    <button class="btn btn-secondary">Create Another Blog Post</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../webjars/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../../webjars/popper.js/2.0.2/popper.min.js"></script>
+    <script src="../../webjars/bootstrap4.5.0/js//bootstrap.min.js"></script>
 </body>
 
 </html>

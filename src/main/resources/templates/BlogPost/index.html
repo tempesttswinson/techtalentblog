@@ -6,14 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech Talent Blog</title>
 
-    <link rel="stylesheet" href="webjars/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../webjars/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
     <div class="container">
         <div class="row">
-            <h1>Welcome to Our site</h1>
-            <h3>Check out the blogs!</h3>
+            <div class="col-md">
+                <h1>Welcome to Our site</h1>
+                <h3>Check out the blogs!</h3>
+            </div>
+
+
+            <br />
 
             <div th:each="blog:${posts}">
                 <div class="col-sm">
@@ -32,29 +38,17 @@
             <!-- End of posts loop -->
         </div>
 
-        <div class="row">
-            <p>Use the form below to submit a blog post:</p>
-            <form action="#" th:action="@{/}" th:object="${blogPost}" method="POST">
-                <label for="blogTitle">Title:</label>
-                <input type="text" name="blogTitle" th:field="*{title}">
-
-                <label for="blogAuthor">Author:</label>
-                <input type="text" name="blogAuthor" th:field="*{author}">
-
-                <label for="blogEntry">Blog Entry:</label>
-                <input type="text" name="blogEntry" th:field="*{blogEntry}">
-
-                <button type="submit">Submit</button>
-            </form>
-        </div>
+        <a href="/blogposts/new">
+            <button class="btn btn-primary">Submit A New Blog Post</button>
+        </a>
     </div>
 
 
 
 
-    <script src="webjars/jquery/3.5.1/jquery.min.js"></script>
-    <script src="webjars/popper.js/2.0.2/popper.min.js"></script>
-    <script src="webjars/bootstrap4.5.0/js//bootstrap.min.js"></script>
+    <script src="/webjars/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/webjars/popper.js/2.0.2/popper.min.js"></script>
+    <script src="/webjars/bootstrap4.5.0/js//bootstrap.min.js"></script>
 
 </body>
 
