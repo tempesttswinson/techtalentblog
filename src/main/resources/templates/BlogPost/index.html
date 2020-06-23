@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Talent Blog</title>
+</head>
+
+<body>
+    <h1>Welcome to Our site</h1>
+    <h3>Check out the blogs!</h3>
+
+    <p>Use the form below to submit a blog post:</p>
+    <form action="#" th:action="{/}" th:object="${blogPost}" method="POST">
+        <label for="blogTitle">Title:</label>
+        <input type="text" name="blogTitle" th:field="{title}">
+
+        <label for="blogAuthor">Author:</label>
+        <input type="text" name="blogAuthor" th:field="{author}">
+
+        <label for="blogEntry">Blog Entry:</label>
+        <input type="text" name="blogEntry" th:field="{blogEntry}">
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>
