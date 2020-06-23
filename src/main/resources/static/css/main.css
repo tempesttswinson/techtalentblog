@@ -1,4 +1,12 @@
 html{
-    background-color: #eee;
+    background-color: #6A8866;
     padding: 0.5em 1em;
+    background-image: url(https://images.unsplash.com/photo-1515630278258-407f66498911?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60://images.unsplash.com/photo-1535136104956-115a2cd67fc4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60);
+}
+
+div{
+    background-color: #6A8866;
+}
+.btn-primary{
+    background-color: #FFC300 ;
 }
