@@ -19,6 +19,13 @@ public class BlogPostController {
 
     @GetMapping(value = "/")
     public String index(BlogPost blogPost, Model model) {
+        // remove all the posts from the array everytime the page is refreshed to
+        // prevent duplicates
+        posts.removeAll(posts);
+        // adds all of the posts that already exisit in the database to the array
+        for (BlogPost post : blogPostRepository.findAll()) {
+            posts.add(post);
+        }
         model.addAttribute("posts", posts);
         return "blogpost/index";
     }
@@ -33,7 +40,7 @@ public class BlogPostController {
     @PostMapping(value = "/blogposts")
     public String addNewBlogPost(BlogPost blogPost, Model model) {
         blogPostRepository.save(new BlogPost(blogPost.getTitle(), blogPost.getAuthor(), blogPost.getBlogEntry()));
-        posts.add(blogPost);
+        // posts.add(blogPost);
         model.addAttribute("title", blogPost.getTitle());
         model.addAttribute("author", blogPost.getAuthor());
         model.addAttribute("blogEntry", blogPost.getBlogEntry());
