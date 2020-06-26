@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Talent Blog</title>
+
+    <div th:replace="/fragments/styling :: head-style"></div>
+
+</head>
+
+<body>
+    <div class="container">
+        <div th:replace="/fragments/navbar :: navbar"></div>
+
+        <div class="row">
+            <div class="col-xl">
+                <h3>This post has been deleted !</h3>
+
+
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xl">
+                <a href="/">
+                    <button class="btn btn-primary">Return Home</button>
+                </a>
+                <a href="blogposts/new">
+                    <button class="btn btn-secondary">Create Another Blog Post</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div th:replace="/fragments/styling :: body-links"></div>
+</body>
+
+</html>

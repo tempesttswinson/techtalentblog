@@ -37,6 +37,9 @@
                             <a href="#" th:href="@{blogposts/{id}(id=${blog.id})}">
                                 <button class="btn btn-secondary">Edit</button>
                             </a>
+                            <a href="#" th:href="@{blogposts/delete/{id}(id=${blog.id})}">
+                                <button class="btn btn-danger">Delete</button>
+                            </a>
                         </div>
                     </div>
                     <!--  End of .card -->
